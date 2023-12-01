@@ -15,6 +15,11 @@
             <artifactId>javafx-controls</artifactId>
             <version>13</version>
         </dependency>
+        <dependency>
+			<groupId>com.github.almasb</groupId>
+			<artifactId>fxgl</artifactId>
+			<version>17</version>
+		</dependency>
     </dependencies>
     <build>
         <plugins>
