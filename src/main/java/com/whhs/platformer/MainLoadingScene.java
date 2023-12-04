@@ -37,5 +37,19 @@ public class MainLoadingScene extends LoadingScene{
 		hbox.setTranslateY(getAppHeight() / 2);
 		
 		var t = texture("player.png").subTexture(new Rectangle2D(0, 0, 32, 42));
+		t.setTranslateX(getAppWidth() / 2 - 32/2);
+		t.setTranslateY(getAppHeight() / 2 - 42/2);
+		
+		animationBuilder(this)
+				.duration(Duration.seconds(1.25))
+				.repeatInfinitely()
+				.autoReverse(true)
+				.interpolator(Interpolators.EXPONENTIAL.EASE_IN_OUT())
+				.rotate(t)
+				.from(0)
+				.to(360)
+				.buildAndPlay();
+		
+		getContentRoot().getChildren().setAll(bg, text, hbox, t);
 	}
 }
